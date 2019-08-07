@@ -320,7 +320,19 @@
    background-repeat: no-repeat;
 }
 
+.banner-principal a {
+   text-decoration: none;
+   font-family: "Nunito", sans-serif;
+   color: #ffffff;
+   font-size: 18px;
+   letter-spacing: .4rem;
+   margin: 460px 0 0 230px;
+   position: absolute;
+}
 
+.banner-principal a:hover {
+   color: #f46439;
+}
 
 /*****************************************/
 /************* BANNER MAIOS **************/
