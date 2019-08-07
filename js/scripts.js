@@ -18,6 +18,10 @@ $(document).on('ready', function () {
       infinite: true
    });
 
+   $(window).scroll(function(){
+      $('#menu').css('left',-$(window).scrollLeft());
+    });
+
    // FUNÇÃO PARA ATIVAR MENU FLUTUANTE
    $(window).scroll(function() {    
       var scroll = $(window).scrollTop();
