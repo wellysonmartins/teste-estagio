@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>SELEÇÃO FRONT-END</title>
+		<link
+      href="https://fonts.googleapis.com/css?family=Anton|Barlow:100,400,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.lineicons.com/1.0.1/LineIcons.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      h1 {
+        font-family: 'Anton', sans-serif;
+        font-size: 10rem;
+        text-align: center;
+      }
+      h2 {
+        font-family: 'Barlow', sans-serif;
+        text-align: center;
+        font-size: 3rem;
+        font-weight: 100;
+      }
+      p,
+      li {
+        font-family: 'Barlow', sans-serif;
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 100;
+      }
+      ul {
+        list-style: none;
+        max-width: 70%;
+        margin: 0 auto;
+      }
+      h2 strong {
+        font-weight: bold;
+      }
+      i {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 45px;
+      }
+      span {
+        font-family: 'Barlow', sans-serif;
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 100;
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      input {
+        width: 400px;
+        height: 50px;
+        font-size: 20px;
+        margin-left: 350px;
+      }
+
+      #respostas {
+        color: red;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hey Guys!</h1>
+    <h2>Sejam bem vindos ao nosso <strong>processo de seleção.</strong></h2>
+
+    <p>
+      Para você que pesquisou sobre nós, vai um mini desafio.
+      <strong>E isso pode colocar você a frente dos demais candidatos.</strong>
+    </p>
+    <i class="lni-users"></i>
+    <br />
+        
+    <br />
+    <ul>
+      <li id="input-text01">
+        - Faça uma função que rode no console do browser. Ela precisa retornar
+        dentro de um console, a quantidade exata de caracteres que nosso html
+        possui.
+      </li>
+      <li id="input-text02">- Descubra quais fontes estão sendo utilizadas</li>
+      <li id="input-text03">
+        - Com Jquery, crie um novo html que substituira os textos após nosso
+        icone de users.
+      </li>
+    </ul>
+    <br />
+    <span
+      >Quando chegar sua vez, na entrevista pessoal, mostre para nós o que fez e
+      como descobriu! Bem facinho não acha?</span
+    >
+    <h2 id="respostas">RESPOSTAS NO CONSOLE =D</h2>
+  </div>
+
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script>
+      $(document).ready(function() {
+        QtdCaracteres(); 
+        fontesUtilizadas();   
+        console.log("\nALTERE O TEXTO DO HTML UTILIZANDO AS SEGUINTES FUNÇÕES:");
+        console.log("texto01('') para alterar o primeiro desafio.")
+        console.log("texto02('') para alterar o segundo desafio.")
+        console.log("texto03('') para alterar o terceiro desafio.")
+      });
+      
+      function texto01(texto) {
+        $('#input-text01').html(texto)
+      }
+
+      function texto02(texto) {
+        $('#input-text02').html(texto)
+      }
+
+      function texto03(texto) {
+        $('#input-text03').html(texto)
+      }
+
+      function QtdCaracteres() {
+        var h1_qtd = $("h1").text().length;
+        var h2_qtd = $("h2").text().length;
+        var p_qtd = $("p").text().length;
+        var li_qtd = $("li").text().length;
+        var span_qtd = $("span").text().length;
+        var total = h1_qtd + h2_qtd + p_qtd + li_qtd + span_qtd;
+        
+        console.log ("Total de caracteres no HTML: " + total);
+      }
+        
+      function fontesUtilizadas() {
+        var font_h1 = $("h1").css("font-family");
+        var font_h2 = $("h2").css("font-family");
+        var font_p = $("p").css("font-family");
+        var font_li = $("li").css("font-family");
+        var font_span = $("span").css("font-family");
+        console.log ("\nFontes utilizadas no HTML:");
+        console.log ("Elemento h1: " + font_h1);
+        console.log ("Elemento h2: " + font_h2);
+        console.log ("Elemento p: " + font_p);
+        console.log ("Elemento li: " + font_li);
+        console.log ("Elemento span: " + font_span);
+      }
+        
+      </script>
+  </body>
+</html>
