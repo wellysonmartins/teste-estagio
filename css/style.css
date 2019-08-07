@@ -318,6 +318,19 @@
    height: 732px;
    background-image: url("../img/banner-principal.png");
    background-repeat: no-repeat;
+   padding: 460px 0 0 230px;
+}
+
+.banner-principal a {
+   text-decoration: none;
+   font-family: "Nunito", sans-serif;
+   color: #ffffff;
+   font-size: 18px;
+   letter-spacing: .4rem;
+}
+
+.banner-principal a:hover {
+   color: #f46439;
 }
 
 /*****************************************/
