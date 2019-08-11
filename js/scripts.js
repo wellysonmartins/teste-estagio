@@ -6,7 +6,8 @@ $(document).on('ready', function () {
   btcVoltarTopo();
   addSlickBannerPrincipal();
   addProdutosVitrine();
-  addSlickProdutosVitrine();   
+  addSlickProdutosVitrine();
+  addModalLogin();
 });
 
 /*****************************************************/
@@ -25,6 +26,30 @@ function btcVoltarTopo() {
     $('html, body').animate({ scrollTop: 0 }, 800);
     return false;
   });
+}
+
+/*****************************************************/
+/* FUNÇÃO PARA ADICIONAR MODAL PARA LOGIN ************/
+/*****************************************************/
+function addModalLogin() {
+  var modal = document.getElementById("myModal");
+  var btn = document.getElementById("modalLogin");
+  var span = document.getElementsByClassName("close")[0];
+  
+  btn.onclick = function () {
+    modal.style.display = "block";
+    $('#menu-usuario').css('display', 'none');
+  }
+
+  span.onclick = function () {
+    modal.style.display = "none";
+  }
+
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
 }
 
 /*****************************************************/
@@ -68,7 +93,7 @@ function menuSearch() {
   $('#menu-search').slideToggle();
   $('#menu-search').css('display', 'grid');
   $('#menu-usuario').css('display', 'none');
-  
+
   attrImgCarrinho();
 
   if (!ativoSearch) {
@@ -88,20 +113,20 @@ function menuSearch() {
 function menuUsuario() {
   $('#menu-usuario').slideToggle();
   $('#menu-usuario').css('display', 'grid');
-  
+
   attrImgSearch();
-  attrImgCarrinho();  
+  attrImgCarrinho();
 }
 
 /*****************************************************/
 /* FUNCÃO PARA ABRIR MENU DO CARRINHO ****************/
 /*****************************************************/
-function menuCarrinho() { 
+function menuCarrinho() {
   $('#menu-carrinho').slideToggle();
   $('#qtd-carrinho').slideToggle();
   $('#menu-carrinho').css('display', 'grid');
   $('#menu-usuario').css('display', 'none');
-  
+
   attrImgSearch();
 
   if (!ativoCarrinho) {
@@ -119,8 +144,8 @@ function menuCarrinho() {
 /* FUNÇÃO PARA ATRIBUIR ÍCONES DO CARRINHO ***********/
 /*****************************************************/
 function attrImgCarrinho() {
-  $('#qtd-carrinho').css('display','block');  
-  $('#menu-carrinho').css('display','none');
+  $('#qtd-carrinho').css('display', 'block');
+  $('#menu-carrinho').css('display', 'none');
   $('.carrinho').attr("src", "./img/icon-cart-close-branco.png");
   $('.carrinho-ativo').attr("src", "./img/icon-cart-close-preto.png");
   $('.carrinho').attr("src", "./img/icon-cart.png");
@@ -149,9 +174,9 @@ function addProdutoCarrinho(origem) {
 
   $('#qtd-carrinho').html(total);
 
-  if(origem === 'cart') {
+  if (origem === 'cart') {
     menuCarrinho();
-  }  
+  }
 }
 
 /**********************************************************************/
