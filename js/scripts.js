@@ -143,12 +143,15 @@ function attrImgSearch() {
 /*****************************************************/
 /* FUNÇÃO PARA ADICIONAR 1 ITEM QTD CARRINHO *********/
 /*****************************************************/
-function addProdutoCarrinho() {
+function addProdutoCarrinho(origem) {
   valorAtual = $('#qtd-carrinho').text();
   total = parseInt(valorAtual) + 1;
 
   $('#qtd-carrinho').html(total);
-  menuCarrinho();
+
+  if(origem === 'cart') {
+    menuCarrinho();
+  }  
 }
 
 /**********************************************************************/
@@ -169,7 +172,7 @@ function addProdutosVitrine() {
             <p>${produto.nome}</p>
             <p>R$ <strong>${total.toFixed(2).replace('.', ',')}</strong></p>
             <p>3x de R$ <span class="produto-vitrini-valor-1">${parcela.toFixed(2).replace('.', ',')}</span></p>
-            <a href="${produto.link}">COMPRAR</a>
+            <a onclick="addProdutoCarrinho('vitrine')">COMPRAR</a>
           </figcaption>
         </div>`
     )
