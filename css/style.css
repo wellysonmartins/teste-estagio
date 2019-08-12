@@ -49,6 +49,10 @@ nav.ativo {
    background: transparent;
 }
 
+#menu-search button:hover {
+   opacity: 0.7;
+}
+
 #menu-search input {
    border: none;
    width: 100%;
@@ -197,6 +201,10 @@ nav.ativo {
    align-items: center;
    justify-content: center;
    margin-top: 10px;
+}
+
+#carrinho-vazio a:hover {
+   opacity: 0.7;
 }
 
 #qtd-carrinho {
