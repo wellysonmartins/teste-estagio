@@ -276,6 +276,7 @@ nav.ativo {
 /********************************************/
 #volta-topo {
    cursor: pointer;
+   z-index: 1;
 }
 
 #volta-topo:hover {
@@ -303,21 +304,82 @@ a[href="#top"] img {
 /* BANNER DOS MAIÔS *************************/
 /********************************************/
 #banner-maios {
-   display: grid;
-   grid-template-columns: auto auto auto;
-   width: 75%;
-   margin: 0 auto;
-}
-
-#banner-maios a {
    display: flex;
    justify-content: center;
+   margin-bottom: 24px;
 }
 
-#banner-maios img {
-   width: 95%;
-   margin: 0 0 25px 0;
+.maios-img {
    cursor: pointer;
+}
+
+.maios-img img {
+   width: 300px;
+}
+
+.maios {
+   margin: 0 15px 0 22px;
+   cursor: pointer;
+   position: relative;
+}
+
+.maios-hover {
+	background:#f46439;
+	z-index:1;
+   color:#363636;
+   position: relative;
+   text-align: center;
+   margin-top: -305px;
+   width: 300px;
+   height: 98%;
+	opacity: 0.8;
+   display:none;
+   font-family: "Nunito", sans-serif;
+   text-decoration: none;
+}
+
+.maios:hover .maios-hover {
+   display: table;
+}
+
+.maios-hover:hover .maios-text {
+   color: #363636;
+}
+
+.maios-hover:hover hr {
+   border: 1px solid #ffffff;
+}
+
+.maios-text {
+    text-align: center;
+    margin: 0 auto;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.maios-text {
+	color: #ffffff;
+   transition: color 1s;
+   -webkit-transition: color 1s;
+}
+
+.maios-text p:nth-child(1) {
+   font-size: 25px;
+}
+
+.maios-text p:nth-child(3) {
+   font-size: 11px;
+   margin-top: 10px;
+   letter-spacing: 0.3rem;
+}
+
+.maios-text hr {
+   width: 70px;
+   margin-left: 115px;
+   border: 1px solid #363636;
+   opacity: 0.5;
+   transition: border 1s;
+   -webkit-transition: border 1s;
 }
 
 /********************************************/
@@ -326,6 +388,8 @@ a[href="#top"] img {
 #banner-monte-seu-biquini img {
    width: 100%;
    margin-bottom: -6px;
+   display: block;
+   position: relative;
 }
 
 /********************************************/
@@ -591,6 +655,20 @@ footer section {
 
 /* 1024px ***********************************/
 @media (max-width: 1024px) {
+   .maios-img img {
+      width: 250px;
+   }
+
+   .maios-hover {
+      width: 250px;
+      height: 100%;
+      margin-top: -258px;
+   }
+
+   .maios-text hr {
+      margin-left: 90px;
+   }
+
    #menu-search form {
       width: 670px;
    }
@@ -658,23 +736,23 @@ footer section {
 
    #menu-links a {
       padding: 0 10px;
-   }
-
-   #banner-maios {
-      grid-template-columns: auto;
-   }
-
-   #banner-maios img {
-      width: 80%;
-      margin: 10px auto;
-   }
+   }   
 }
 
 /* 768px ************************************/
 @media (max-width: 768px) {
-   #banner-maios a{
-      display: flex;
-      flex-direction: row;
+   .maios-img img {
+      width: 180px;
+   }
+
+   .maios-hover {
+      width: 180px;
+      height: 181px;
+      margin-top: -186px;
+   }
+
+   .maios-text hr {
+      margin-left: 50px;
    }
 
    #menu-usuario {
@@ -728,6 +806,24 @@ footer section {
 @media (max-width: 425px) {
    nav {
       display: none;
+   }
+
+   .maios {
+      margin: 0 5px;
+   }
+
+   .maios-img img {
+      width: 120px;
+   }
+
+   .maios-hover {
+      width: 120px;
+      height: 120px;
+      margin-top: -125px;
+   }
+
+   .maios-text hr {
+      margin-left: 25px;
    }
 
    footer section {
