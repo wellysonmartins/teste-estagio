@@ -146,8 +146,6 @@ function menuCarrinho() {
 function attrImgCarrinho() {
   $('#qtd-carrinho').css('display', 'block');
   $('#menu-carrinho').css('display', 'none');
-  $('.carrinho').attr("src", "./img/icon-cart-close-branco.png");
-  $('.carrinho-ativo').attr("src", "./img/icon-cart-close-preto.png");
   $('.carrinho').attr("src", "./img/icon-cart.png");
   $('.carrinho-ativo').attr("src", "./img/icon-cart-hover.png");
   ativoCarrinho = false;
@@ -158,9 +156,7 @@ function attrImgCarrinho() {
 /*****************************************************/
 function attrImgSearch() {
   $('#menu-search').css('display', 'none');
-  $('.search').attr("src", "./img/icon-close-branco.png");
   $('.search').attr("src", "./img/icon-search.png");
-  $('.search-ativo').attr("src", "./img/icon-close-preto.png");
   $('.search-ativo').attr("src", "./img/icon-search-hover.png");
   ativoSearch = false;
 }
