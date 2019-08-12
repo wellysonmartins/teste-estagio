@@ -173,6 +173,13 @@ function addProdutoCarrinho(origem) {
   total = parseInt(valorAtual) + 1;
 
   $('#qtd-carrinho').html(total);
+  
+  if (total == 1) {
+    $('#cart-vazio').html(`<p>VOCÊ ADICIONOU ${total} PRODUTO.</p>`);
+  } else {
+    $('#cart-vazio').html(`<p>VOCÊ ADICIONOU ${total} PRODUTOS.</p>`);
+  }
+
 
   if (origem === 'cart') {
     menuCarrinho();
