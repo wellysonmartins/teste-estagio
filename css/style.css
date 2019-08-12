@@ -419,6 +419,7 @@ a[href="#top"] img {
    display: inline-block;
    position: relative;
    cursor: pointer;
+   outline: none;
  }
 
 .container img {
@@ -463,11 +464,16 @@ a[href="#top"] img {
    color: #f46439;
    display: none;
    cursor: pointer;
+   outline: none;
 }
 
 .container:hover a {
    display: grid;
    align-items: center;
+}
+
+.container a:hover {
+   background-color: #FFFAF0;
 }
 
 /********************************************/
