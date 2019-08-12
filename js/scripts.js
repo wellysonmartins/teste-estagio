@@ -168,7 +168,7 @@ function attrImgSearch() {
 /*****************************************************/
 /* FUNÇÃO PARA ADICIONAR 1 ITEM QTD CARRINHO *********/
 /*****************************************************/
-function addProdutoCarrinho(origem) {
+function addProdutoCarrinho() {
   valorAtual = $('#qtd-carrinho').text();
   total = parseInt(valorAtual) + 1;
 
@@ -178,11 +178,6 @@ function addProdutoCarrinho(origem) {
     $('#cart-vazio').html(`<p>VOCÊ ADICIONOU ${total} PRODUTO.</p>`);
   } else {
     $('#cart-vazio').html(`<p>VOCÊ ADICIONOU ${total} PRODUTOS.</p>`);
-  }
-
-
-  if (origem === 'cart') {
-    menuCarrinho();
   }
 }
 
